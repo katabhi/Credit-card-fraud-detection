@@ -4,7 +4,7 @@
 # Libraries
 *.lib
 *.a
-
+ 
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
@@ -15,3 +15,49 @@
 *.exe
 *.out
 *.app
+
+SQL> Create Batabase creditcard;
+SQL> show database
+
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUES(01,'coust1',28,'loca1',4000.00);
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUE (02,'coust2',38,'loca2',20000.00);
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUE (03,'coust3',42,'loca3',3332.00);
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUE (04,'coust4',25,'loca4',3434.00);
+
+SQL> SELECT * FROM CUSTOMERS;
+
+SQL> INSERT INTO first_table [(column1, column2, ... columnN)] 
+     SELECT column1, column2, ...columnN 
+     FROM second_table_name
+     [WHERE coust*];
+SQL> SELECT column1 [, column2 ]
+     FROM table1 [, table2 ]
+     [WHERE column*]
+
+SQL> UNION
+
+SQL> SELECT column1 [, column2 ]
+     FROM table1 [, table2 ]
+     [WHERE table*]
+    
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+     FROM CUSTOMERS
+     LEFT JOIN ORDERS
+     ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID
+
+SQL> UNION
+     
+SQL> SELECT  ID, NAME, AMOUNT, DATE
+     FROM CUSTOMERS
+     RIGHT JOIN ORDERS
+     ON CUSTOMERS.ID = ORDERS.CUSTOMER_ID;
+     
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUE (05,'coust5',30,'loca5',4599.00);
+SQL> INSERT INTO COUSTOMER (ID,NAME,AGE,ADDRESS,SALARY)
+SQL> VALUE (06,'coust6',24,'loca6',3324.00);
+
